@@ -53,7 +53,7 @@ app.get('/', function (req, res) {
 
 
 app.get('/new-file', function (req, res) {
-  res.send('New file got created');
+  res.send(CreateTemplate(person));
 });
 
 
