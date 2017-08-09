@@ -30,6 +30,7 @@ function createTemplate(data)
    
    <body>
    <div class="container">
+   <a href="http://praiselinvictor.imad.hasura-app.io">Home</a>
    <h3>${name}<h3>
    <div>${age}</div>
    <div>${dateOfBirth}</div>
