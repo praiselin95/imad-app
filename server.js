@@ -5,6 +5,12 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+
+function request()
+
+
+
+
 var person={
     name:'jerk',
     age:'24',
@@ -55,6 +61,12 @@ app.get('/', function (req, res) {
 
 app.get('/new-file', function (req, res) {
   res.send(createTemplate(person));
+});
+var counter=0;
+app.get('/counter',function (req,res)
+{
+    counter=counter+1;
+    res.send(counter.toString()); 
 });
 
 
