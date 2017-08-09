@@ -4,13 +4,6 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-
-
-
-
-
-
-
 var person={
     name:'jerk',
     age:'24',
