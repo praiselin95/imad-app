@@ -2,6 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool=require('pg').Pool;
+var crypto = require('crypto');
 var confiq={
     user:'praiselinvictor',
     database:'praiselinvictor',
@@ -17,6 +18,8 @@ var person={
     age:'24',
     dateOfBirth:'May 11,1994'
 }
+
+
 
 function createTemplate(data)
 {
@@ -64,6 +67,17 @@ app.get('/test-db', function (req, res) {
         }
     });
     
+});
+
+function hash(input,salt)
+{
+    var hashed=crypto.pbkdf2Sync('secret', 'salt', 100000, 512, 'sha512');
+    return hashed.toString('hex');
+}
+
+app.get('/hash/:input', function (req, res) {
+    var hashedString=hash(req.params.input,'this-is-a-string');
+  res.send(hashedString);
 });
 
 
