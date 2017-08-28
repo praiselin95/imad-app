@@ -26,7 +26,7 @@ var submit=document.getElementById('submit')
         }
     };
    /* request.open('GET','http://praiselinvictor.imad.hasura-app.io/counter',true);*/
-    request.open('GET','http://praiselinvictor.imad.hasura-app.io/user',true);
+    request.open('GET','http://praiselinvictor.imad.hasura-app.io/create-user',true);
     
   
     request.send(null);
