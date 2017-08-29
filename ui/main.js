@@ -4,7 +4,7 @@ data.username=document.getElementById('username');
 data.password=document.getElementById('password');
 $.ajax({
 						type: 'POST',
-						data: JSON.stringify(data),
+						data: JSON.stringify({username:"praiselin",password:"password"}),
 				        contentType: 'application/json',
                         url:'/create-user',						
                         success: function(data) {
