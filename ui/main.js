@@ -1,5 +1,5 @@
 console.log('Loaded!');
-  var data = {};
+/*  var data = {};
 data.username=document.getElementById('username');
 data.password=document.getElementById('password');
 $.ajax({
@@ -11,7 +11,31 @@ $.ajax({
                             console.log('success');
                             console.log(JSON.stringify(data));
                         }
-                    });
+                    });*/
+
+var submit=document.getElementById("user_submit");
+
+submit.onclick=function()
+{
+  alert("hi");
+   var nameInput=document.getElementById("username");
+   var name=nameInput.value;
+  
+   var pwdInput=document.getElementById("pwd");
+   var pwd=pwdInput.value;
+  
+   
+ $.ajax({
+url:'/login',
+contentType: "application/json",
+data:JSON.stringify({username:name,password:pwd}),
+type:'POST',
+success:function(data){
+console.log(data);
+}
+});
+}
+
 
 /*var button=document.getElementById('counter');*/
 /*button.onclick=function(){
