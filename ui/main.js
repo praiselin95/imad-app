@@ -6,7 +6,7 @@ $.ajax({
 						type: 'POST',
 						data: JSON.stringify(data),
 				        contentType: 'application/json',
-                        url:'http://praiselinvictor.imad.hasura-app.io/create-user',						
+                        url:'/create-user',						
                         success: function(data) {
                             console.log('success');
                             console.log(JSON.stringify(data));
