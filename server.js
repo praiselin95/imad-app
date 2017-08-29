@@ -131,6 +131,7 @@ app.post('/login',function(req,res){
         console.log(hashedPassword);
         if(hashedPassword===dbString)
         {
+            req.session.auth={userId:result.rows[0].id};
             res.send('credentials correct');
            
         } else
@@ -141,6 +142,15 @@ app.post('/login',function(req,res){
       }
  
  });
+});
+app.get('/check-login',function(req,res){
+    if(req.session && req.session.auth && req.session.auth.userId){
+        res.send('you are logged in:'+req.session.auth.userId.toString());
+    }
+    else
+    {
+    res.send('you are not logged in:' +req.session.auth.userId.toString());
+    }
 });
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
