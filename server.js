@@ -67,6 +67,12 @@ app.get('/test-db', function (req, res) {
     });
     
 });
+/*app.post('/create-user', function(req, res){
+	var obj = {};
+	console.log('body: ' + JSON.stringify(req.body));
+	res.send(req.body);
+});*/
+
 
 function hash(input,salt)
 {
@@ -81,6 +87,7 @@ app.get('/hash/:input', function (req, res) {
 
 
 app.get('/create-user', function (req, res) {
+    
    var username=req.body.username;
     var password=req.body.password;
     var salt=crypto.randomBytes(128).toString('hex');
