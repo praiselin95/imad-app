@@ -1,17 +1,17 @@
 console.log('Loaded!');
-/*  var data = {};
+  var data = {};
 data.username=document.getElementById('username');
 data.password=document.getElementById('password');
 $.ajax({
 						type: 'POST',
-						data: JSON.stringify({username:"praiselin",password:"password"}),
+						data: JSON.stringify({username:"test",password:"test"}),
 				        contentType: 'application/json',
                         url:'/create-user',						
                         success: function(data) {
                             console.log('success');
                             console.log(JSON.stringify(data));
                         }
-                    });*/
+                    });
 
 var submit=document.getElementById("user_submit");
 
