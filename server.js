@@ -77,7 +77,8 @@ app.get('/test-db', function (req, res) {
 function hash(input,salt)
 {
     var hashed=crypto.pbkdf2Sync('secret', 'salt', 100000, 512, 'sha512');
-    return hashed.toString('hex');
+    // return hashed.toString('hex');
+     return ["pbkdf2","10000",salt,key.toString('hex')].join('$');
 }
 
 app.get('/hash/:input', function (req, res) {
