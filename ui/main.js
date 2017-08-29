@@ -30,8 +30,8 @@ $.ajax({
  
 				
    
-    /*request.open('GET','http://praiselinvictor.imad.hasura-app.io/create-user',true);*/
+    /*request.open('GET','http://praiselinvictor.imad.hasura-app.io/create-user',true);
     
   
     request.send(null);
-};
+};*/
