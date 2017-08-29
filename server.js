@@ -114,7 +114,7 @@ app.post('/login',function(req,res)
  console.log("user"+username);
  console.log("userpwd"+pass);
 
- pool.query('SELECT * FROM  userTable WHERE username=$1',[username],function(err,result){
+ pool.query('SELECT * FROM  "userTable" WHERE username=$1',[username],function(err,result){
        if(err)
       {
           res.status(500).send(err.toString());
